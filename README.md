@@ -1,0 +1,2 @@
+# mybatis
+在IDEA中测试SSM整合及mybatis的分页插件测试
