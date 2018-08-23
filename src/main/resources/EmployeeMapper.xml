@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lijia.dao.EmployeeMapper">
+    <select id="getEmployee" resultType="com.lijia.bean.Employee">
+        select id,last_name lastName,gender,email from tbl_employee where id = #{id}
+    </select>
+
+    <!--List<Employee> getAll();-->
+    <select id="getAll" resultType="com.lijia.bean.Employee">
+        select * from tbl_employee
+    </select>
+
+    <!--public void addBatch(Employee employee);-->
+    <insert id="addBatch">
+        insert into tbl_employee (last_name,gender,email,d_id) values(#{lastName},#{gender},#{email},#{dept.id})
+    </insert>
+
+</mapper>
